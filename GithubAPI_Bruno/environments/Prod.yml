@@ -1,0 +1,5 @@
+name: Prod
+variables:
+  - name: domain
+    value: https://api.github.com
+    description: ""

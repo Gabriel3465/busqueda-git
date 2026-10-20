@@ -1,0 +1,56 @@
+opencollection: 1.0.0
+info:
+  name: GithubAPI
+config:
+  proxy:
+    inherit: true
+    config:
+      protocol: http
+      hostname: ''
+      port: ''
+      auth:
+        username: ''
+        password: ''
+      bypassProxy: ''
+  environments:
+    - name: Prod
+      variables:
+        - name: domain
+          value: https://api.github.com
+items:
+  - info:
+      name: Get User By User Name
+      type: http
+      seq: 1
+    http:
+      method: GET
+      url: '{{domain}}/users/mparra'
+      auth: inherit
+    settings:
+      encodeUrl: true
+      timeout: 0
+      followRedirects: true
+      maxRedirects: 5
+      forwardAuthorizationHeader: false
+  - info:
+      name: Search User
+      type: http
+      seq: 2
+    http:
+      method: GET
+      url: '{{domain}}/search/users'
+      auth: inherit
+    settings:
+      encodeUrl: true
+      timeout: 0
+      followRedirects: true
+      maxRedirects: 5
+      forwardAuthorizationHeader: false
+bundled: true
+extensions:
+  bruno:
+    ignore:
+      - node_modules
+      - .git
+    exportedAt: '2026-10-16T02:09:31.119Z'
+    exportedUsing: Bruno

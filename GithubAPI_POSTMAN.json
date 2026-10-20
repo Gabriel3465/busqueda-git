@@ -1,0 +1,58 @@
+{
+  "info": {
+    "name": "GithubAPI",
+    "description": null,
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get User By User Name",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "description": "",
+        "url": {
+          "raw": "{{domain}}/users/mparra",
+          "protocol": "",
+          "host": [
+            "{{domain}}"
+          ],
+          "path": [
+            "users",
+            "mparra"
+          ],
+          "query": [],
+          "variable": []
+        }
+      }
+    },
+    {
+      "name": "Search User",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "description": "",
+        "url": {
+          "raw": "{{domain}}/search/users",
+          "protocol": "",
+          "host": [
+            "{{domain}}"
+          ],
+          "path": [
+            "search",
+            "users"
+          ],
+          "query": [],
+          "variable": []
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "domain",
+      "value": "",
+      "type": "default"
+    }
+  ]
+}
